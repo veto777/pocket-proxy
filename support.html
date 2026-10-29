@@ -1,0 +1,23 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pocket Proxy Support</title><link rel="stylesheet" href="style.css"></head><body><main>
+<h1>Pocket Proxy support</h1>
+<p>Questions or problems? Email <a href="mailto:support@constructhub.us?subject=Pocket%20Proxy">support@constructhub.us</a> and include your iPhone model and iOS version.</p>
+
+<h2>Connect over USB</h2>
+<ol>
+<li>Connect the iPhone to your computer with a cable and tap <b>Trust</b> if the iPhone asks.</li>
+<li>Install iproxy on the computer: <code>brew install libimobiledevice</code> (Mac) or <code>sudo apt install libimobiledevice-utils</code> (Linux).</li>
+<li>Open Pocket Proxy and tap <b>Start Proxy</b>.</li>
+<li>On the computer run <code>iproxy 1080 1080</code> and leave it running.</li>
+<li>Set your app to use SOCKS5 proxy <code>127.0.0.1:1080</code> with the username and password shown in Pocket Proxy. To test: <code>curl --socks5-hostname 'USER:PASS@127.0.0.1:1080' https://api.ipify.org</code></li>
+</ol>
+
+<h2>Connect over Wi-Fi</h2>
+<p>Turn on <b>Allow Wi-Fi connections</b> in Pocket Proxy, start the proxy, and use the Wi-Fi address shown in the app from a computer on the same network. Allow local network access when the iPhone asks.</p>
+
+<h2>Common questions</h2>
+<p><b>The proxy stopped answering.</b> iPhone pauses apps that are not on screen. Keep Pocket Proxy open; it keeps the screen on while the proxy runs. For a phone that stays plugged in, Guided Access (Settings › Accessibility › Guided Access) keeps the app on screen.</p>
+<p><b>"No cellular data connection".</b> Check that Cellular Data is on in Settings and that Pocket Proxy is allowed to use it (Settings › Cellular › Pocket Proxy).</p>
+<p><b>Does it use my data plan?</b> Yes. Everything sent through the proxy counts as cellular data. The app shows how much the current session has used.</p>
+<p><b>Is UDP supported?</b> No. Pocket Proxy supports SOCKS5 CONNECT (TCP), which covers web browsing, HTTPS and most apps.</p>
+<footer>© 2026 Construct Hub LLC · <a href="privacy.html">Privacy policy</a></footer></main></body></html>
