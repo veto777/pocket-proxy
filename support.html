@@ -9,7 +9,7 @@
 <li>Install iproxy on the computer: <code>brew install libimobiledevice</code> (Mac) or <code>sudo apt install libusbmuxd-tools</code> (Linux).</li>
 <li>Open Pocket Proxy and tap <b>Start Proxy</b>.</li>
 <li>On the computer run <code>iproxy 1080 1080</code> and leave it running.</li>
-<li>Set your app to use SOCKS5 proxy <code>127.0.0.1:1080</code> with the username and password shown in Pocket Proxy. To test: <code>curl --socks5-hostname 'USER:PASS@127.0.0.1:1080' https://api.ipify.org</code></li>
+<li>Set your app to use SOCKS5 proxy <code>127.0.0.1:1080</code> with the username and password shown in Pocket Proxy. To test: <code>curl -x 'socks5h://USER:PASS@127.0.0.1:1080' https://api.ipify.org</code> (the app's "How to connect your computer" screen shows this command with your details filled in).</li>
 </ol>
 
 <h2>Connect over Wi-Fi</h2>
@@ -18,7 +18,7 @@
 <h2>Common questions</h2>
 <p><b>The proxy stopped answering.</b> iPhone pauses apps that are not on screen. Keep Pocket Proxy open; it keeps the screen on while the proxy runs. For a phone that stays plugged in, Guided Access (Settings › Accessibility › Guided Access) keeps the app on screen.</p>
 <p><b>"No cellular data connection".</b> Check that Cellular Data is on in Settings and that Pocket Proxy is allowed to use it (Settings › Cellular › Pocket Proxy).</p>
-<p><b>Does it use my data plan?</b> Yes. Everything sent through the proxy counts as cellular data. The app shows how much the current session has used.</p>
+<p><b>Does it use my data plan?</b> With "Send traffic over cellular only" on (the default), yes: everything sent through the proxy goes over cellular data. The app shows how much went through the proxy this session; your carrier's count also includes network overhead.</p>
 <p><b>Which apps work?</b> Apps and tools that support SOCKS5 with a username and password, such as curl and Python. Some browsers, including Chrome, don't support SOCKS5 passwords. Only TCP is supported, not UDP.</p>
 <p><b>Is Wi-Fi mode safe?</b> SOCKS5 sends the username and password without encryption, so use Wi-Fi connections only on networks you trust. The USB cable is safer.</p>
 <footer>© 2026 Construct Hub LLC · <a href="privacy.html">Privacy policy</a></footer></main></body></html>
