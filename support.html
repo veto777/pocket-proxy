@@ -8,8 +8,8 @@
 <li>Connect the iPhone to your computer with a cable and tap <b>Trust</b> if the iPhone asks.</li>
 <li>Install iproxy on the computer: <code>brew install libimobiledevice</code> (Mac) or <code>sudo apt install libusbmuxd-tools</code> (Linux).</li>
 <li>Open Pocket Proxy and tap <b>Start Proxy</b>.</li>
-<li>On the computer run <code>iproxy 1080 1080</code> and leave it running.</li>
-<li>Set your app to use SOCKS5 proxy <code>127.0.0.1:1080</code> with the username and password shown in Pocket Proxy. To test: <code>curl -x 'socks5h://USER:PASS@127.0.0.1:1080' https://api.ipify.org</code> (the app's "How to connect your computer" screen shows this command with your details filled in).</li>
+<li>On the computer run <code>iproxy 21080 21080</code> and leave it running.</li>
+<li>Set your app to use SOCKS5 proxy <code>127.0.0.1:21080</code> with the username and password shown in Pocket Proxy. To test: <code>curl -x 'socks5h://USER:PASS@127.0.0.1:21080' https://api.ipify.org</code> (the app's "How to connect your computer" screen shows this command with your details filled in).</li>
 </ol>
 
 <h2>Connect over Wi-Fi</h2>
