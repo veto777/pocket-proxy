@@ -10,13 +10,13 @@
 <p>The proxy passes traffic between your own computer and the websites and services it connects to. The app does not read, store, change or share that traffic. To show you what is happening, the app keeps a short list of recent connections (destination address and byte counts) in memory on your iPhone only; it is erased when the app closes and never leaves the device.</p>
 
 <h2>Your public IP address</h2>
-<p>To show your cellular public IP address, the app makes one request to <a href="https://www.ipify.org">api.ipify.org</a>, a free third-party service, when you start the proxy or tap Check. Like any website, that service sees your iPhone's public IP address. No other information is sent.</p>
+<p>To show your public IP address, the app makes a request to <a href="https://www.ipify.org">api.ipify.org</a>, a free third-party service, when the proxy starts and when you tap Check or Test the proxy (the test request travels through the proxy over plain HTTP). Like any website, that service sees your iPhone's public IP address. No other information is sent.</p>
 
 <h2>Data on your iPhone</h2>
 <p>Your settings (port, username, options) are stored on your iPhone. The proxy password is stored in the iPhone keychain and is never sent anywhere except when your own computer presents it to the proxy.</p>
 
 <h2>Local network</h2>
-<p>If you turn on Allow Wi-Fi connections, iPhone asks for permission to use the local network so computers on your Wi-Fi can connect to the proxy. Only devices that know the username and password can use it.</p>
+<p>If you turn on Allow Wi-Fi connections, iPhone asks for permission to use the local network so computers on your Wi-Fi can connect to the proxy. Only devices that know the username and password can use it. SOCKS5 sends that password without encryption, so use Wi-Fi connections only on networks you trust; the USB cable is safer. The proxy never accepts connections over the cellular network.</p>
 
 <h2>Children</h2>
 <p>Pocket Proxy does not knowingly collect any information from anyone, including children.</p>
